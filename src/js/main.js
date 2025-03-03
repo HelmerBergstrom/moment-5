@@ -28,4 +28,4 @@ document.addEventListener("DOMContentLoaded", function () {
             animationMenu.classList.remove("scrolled");
         }
     })
-})
+});
