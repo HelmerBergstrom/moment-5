@@ -1,0 +1,195 @@
+/* Animeringar för moment 4. */
+.animation-menu {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(119, 119, 119);
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 30px;
+    z-index: 1000;
+    transition: all 1s ease;
+    li {
+        list-style: none;
+        padding: 10px;
+        color: white;
+    }
+    li:hover {
+        background-color: rgb(55, 55, 55);
+    }
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+.scrolled {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.scrolled a {
+    color: white;
+}
+
+@keyframes background {
+    0% {
+        background-color: black;
+        color: white;
+    }
+    25% {
+        background-color: white;
+        color: red;
+    }
+    50% {
+        background-color: #848484;
+        color: #848484;
+    }
+    75% {
+        background-color: black;
+        color: blue;
+    }
+    100% {
+        background-color: #ffffff;
+        color: black;
+    }
+}
+.h1-animation {
+    animation-name: background;
+    animation-duration: 5s;
+    border: solid 10px;
+    border-radius: 100px;
+    margin-top: 150px;
+}
+
+.div-animation {
+    position: absolute;
+    z-index: 1000;
+    top: 250px;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    transition-property: all;
+    transition-duration: 3s;
+p {
+    text-align: center; 
+    color: white;
+    font-size: 30px;
+}
+}
+.div-animation:hover,
+.div-animation.stay {
+    width: 0px;
+    height: 0px;
+p {
+    display: none;
+}
+}
+
+.football-players {
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+}
+@keyframes move {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(500px, 0px);
+    }
+    100% {
+        transform: translate(650px, 220px);
+    }
+}
+.football-playerAni {
+    color: #848484;
+    text-align: center;
+    font-size: 100px;
+    margin-top: 50px;
+}
+.football-animation {
+    animation: move 1s infinite alternate;
+    @extend .football-playerAni;
+}
+.football-playerAni2 {
+    @extend .football-playerAni;
+    transform: rotateY(180deg);
+    margin-left: 500px;
+}
+.football-playerAni3 {
+    font-size: 100px;
+    color: #848484;
+    transform: rotateY(180deg);
+    text-align: center;
+    margin-top: 250px;
+    margin-left: 75px;
+}
+.h2-animation {
+    margin-top: 50px;
+    border: solid 10px;
+    border-radius: 100px;
+    animation-name: background;
+    animation-duration: 20s;
+}
+.button-div {
+    position: relative;
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes crazy {
+    0%   { transform: translate(0, 0) rotate(0deg); }
+    20%  { transform: translate(200px, -150px) rotate(90deg); }
+    40%  { transform: translate(-250px, 100px) rotate(180deg); }
+    60%  { transform: translate(300px, 200px) rotate(270deg); }
+    80%  { transform: translate(-150px, -200px) rotate(360deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.button-animation {
+    position: absolute;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: 0.7s ease-in-out;
+    animation: crazy 3s infinite linear;
+}
+
+.button-animation:hover {
+    animation: none;
+    background-color: green;
+} 
+
+@media (max-width: 1000px) {
+    .scrolled, .animation-menu {
+        display: none;
+    }
+    .football-playerAni2, .football-playerAni3 {
+        display: none;
+    }
+    @keyframes move {
+        0% {
+            transform: translate(0px, 0px);
+        }
+        100% {
+            transform: translate(200px, 0px);
+        }
+    }
+    @keyframes crazy {
+        0%   { transform: translate(0, 0) rotate(0deg); }
+        20%  { transform: translate(200px, -150px) rotate(90deg); }
+        40%  { transform: translate(-250px, 100px) rotate(180deg); }
+        60%  { transform: translate(200px, 100px) rotate(270deg); }
+        80%  { transform: translate(-150px, -200px) rotate(360deg); }
+        100% { transform: translate(0, 0) rotate(0deg); }
+    }
+
+}

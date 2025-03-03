@@ -1,0 +1,28 @@
+/* För saker som används på hela webbplatsen. T.ex. typsnitt. */
+$primary-font: Arial, Helvetica, sans-serif;
+$menu-font: 'Courier New', Courier, monospace;
+
+main {
+    font-family: $primary-font;
+}
+h1 {
+    font-size: 40px;
+}
+h2 {
+    font-size: 35px;
+}
+p {
+    font-size: 20px;
+}
+.menu {
+    font-size: 28px;
+    font-family: $menu-font;
+}
+.animation-menu {
+    font-size: 28px;
+    font-family: $menu-font;
+}
+.mobile-menu {
+    font-size: 28px;
+    font-family: $menu-font;
+}
