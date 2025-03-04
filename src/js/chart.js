@@ -70,7 +70,7 @@ function createChart(courses, programs) {
       },
   });
   new Chart(ctx2, {
-    type: 'bar',
+    type: 'pie',
     data: {
         labels: programs.map(item => item.name), 
         datasets: [{
@@ -83,3 +83,4 @@ function createChart(courses, programs) {
 
 // Hämta data och skapa diagrammet
 fetchData();
+
