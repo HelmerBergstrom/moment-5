@@ -30,7 +30,7 @@ async function fetchData() {
 
       const topSix2 = programs 
         .sort((a, b) => b.applicantsTotal - a.applicantsTotal)
-        .slice(0, 6);
+        .slice(0, 5);
 
 
       createChart(topSix, topSix2);
