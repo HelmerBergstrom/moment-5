@@ -83,4 +83,3 @@ function createChart(courses, programs) {
 
 // Hämta data och skapa diagrammet
 fetchData();
-

@@ -122,6 +122,35 @@ h2 {
     justify-content: center;
 }
 
+#map { 
+    height: 500px; 
+    width: 80%;
+    margin: 0 auto;
+}
+
+#search-field {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+
+
+    input {
+        width: 400px;
+        height: 50px;
+        font-size: 30px;
+    }    
+    button {
+        width: 100px;
+        height: 50px;
+        background-color: transparent;
+        color: black;
+        border: 1px solid #333;
+        border-width: 2px;
+        font-size: 20px;
+        margin-left: 20px;
+    }
+}
+
 footer {
     @extend h1;
 
