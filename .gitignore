@@ -3,4 +3,4 @@
 /package.json
 /package-lock.json
 /.parcel-cache
-/out
+/src/out
